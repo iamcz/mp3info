@@ -6,3 +6,9 @@ mp3info: main.o
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) -c $^
+
+test: mp3info opening.mp3
+	./mp3info opening.mp3
+
+clean: main.o mp3info
+	rm $^
