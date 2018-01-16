@@ -22,6 +22,10 @@ int main(int argc, char * argv[]) {
       return -1;
     }
     fs.close();
+    char version[2];
+    fs.read(version, 2);
+    cout << (int) (char) 10 << endl;
+    cout << "Version: 2." << (int) version[0] << "." << (int) version[1] << endl;
   } else {
     cerr << "Error: could not open " << filename << endl;
     return -1;
